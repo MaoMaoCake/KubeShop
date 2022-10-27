@@ -10,7 +10,7 @@ spec:
 #      team: frontend
   podMonitorSelector:
     matchLabels:
-      team: frontend
+      team: node-exporter
   resources:
     requests:
       memory: 400Mi

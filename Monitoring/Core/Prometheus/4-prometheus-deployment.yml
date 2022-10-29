@@ -5,9 +5,9 @@ metadata:
   namespace: default
 spec:
   serviceAccountName: prometheus
-#  serviceMonitorSelector:
-#    matchLabels:
-#      team: frontend
+  serviceMonitorSelector:
+    matchLabels:
+      app: kubelet
   podMonitorSelector:
     matchLabels:
       team: node-exporter
@@ -15,3 +15,7 @@ spec:
     requests:
       memory: 400Mi
   enableAdminAPI: false
+
+#  volumeMounts:
+#    - mountPath:
+#      name:
